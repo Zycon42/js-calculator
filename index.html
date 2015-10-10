@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Calculator</title>
+</head>
+<body>
+    <div>
+        <label>Input:</label>
+    </div>
+    <div>
+        <input type="text" id="input"/>
+    </div>
+    <div>
+        <button type="button" id="calc-btn">Compute</button>
+    </div>
+
+    <div>
+        <label>Result</label>
+    </div>
+    <div>
+        <span id="result"></span>
+    </div>
+
+    <script src="js/calculator.js"></script>
+    <script>
+        var btn = document.getElementById("calc-btn");
+        btn.addEventListener("click", function() {
+            const result = calculator.calculate(document.getElementById("input").value);
+            document.getElementById("result").innerHTML = result;
+        }, false);
+    </script>
+</body>
+</html>
